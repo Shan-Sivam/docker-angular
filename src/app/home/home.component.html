@@ -1,0 +1,18 @@
+<div class="card mt-4">
+    <h4 class="card-header">You're logged in with Angular App</h4>
+    <div class="card-body">
+        <h6>Users from secure api end point</h6>
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <ul *ngIf="users">
+            <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+        </ul>
+
+        <div *ngIf="currentUser">
+          <h4>Current User:</h4>
+          <p>Name : {{ currentUser.firstName }} {{ currentUser.lastName }}</p>
+          <p>User Name : {{ currentUser.email}} </p>
+          <p>Token : {{ currentUser.token }} </p>
+        </div>
+
+    </div>
+</div>

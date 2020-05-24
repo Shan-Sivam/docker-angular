@@ -1,0 +1,50 @@
+<style>
+
+  @media (min-width: 768px) {
+    .navbar-nav {
+      width: 100%;
+      text-align: center;
+    }
+
+    .navbar-nav > li {
+      float: none;
+      display: inline-block;
+    }
+
+    .navbar-nav > li.navbar-right {
+      float: right !important;
+    }
+
+    .navbar-nav > h5 {
+      margin-right:20px;
+    }
+  }
+</style>
+
+
+<!-- nav -->
+  <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+
+      <h5 class="nav-item nav-link" routerLink="/">Angular App</h5>
+
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+      <a class="nav-item nav-link" routerLink="/register" >Register</a>
+    </div>
+    <div class="navbar-nav" style="width:300px; float:right; margin-right:10px;">
+      <span class="nav-item nav-link">{{ currentUser.firstName }} {{ currentUser.lastName }} </span>
+    </div>
+  </nav> 
+
+<!-- main app container -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- credits -->
+<div class="text-center mt-4">
+  <p>
+    Angular with Auth Token - {{envName}}
+  </p>
+</div>

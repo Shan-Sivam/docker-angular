@@ -1,0 +1,10 @@
+version: '3'
+services:
+  node-api:
+    image: 'shansivam/node-api'
+    ports:
+      - "1337:1337"
+  angular-app:
+    build: .
+    ports:
+      - "4200:80"
