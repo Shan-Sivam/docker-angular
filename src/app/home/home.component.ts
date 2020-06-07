@@ -1,28 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { first } from 'rxjs/operators';
 
 import { User } from '@app/_models';
 import { UserService, AuthenticationService } from '@app/_services';
+import { UserlistComponent } from '../_shared/userlist.component';
 
 @Component({ templateUrl: 'home.component.html' })
 export class HomeComponent {
-    loading = false;
-    users: User[];
-    currentUser: User;
+
+  currentUser: User;
+
+  @ViewChild(UserlistComponent, { static: false }) uList: UserlistComponent;
 
   constructor(private userService: UserService, private authService: AuthenticationService) { }
 
+  userVersion: string = "";
+ 
+  
     ngOnInit() {
-        this.loading = true;
-        this.userService.getAll().pipe(first()).subscribe(users => {
-            this.loading = false;
-            this.users = users;
-        });
-
+        
       this.authService.currentUser.subscribe(user => {
         console.log(user);
         this.currentUser = user;
       })
-
     }
+
+  ngAfterViewInit() {
+    this.userVersion = this.uList.version;
+    }
+
 }

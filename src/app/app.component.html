@@ -30,7 +30,10 @@
 
       <a class="nav-item nav-link" routerLink="/">Home</a>
       <a class="nav-item nav-link" (click)="logout()">Logout</a>
-      <a class="nav-item nav-link" routerLink="/register" >Register</a>
+      <a class="nav-item nav-link" routerLink="/register">Register</a>
+      <a class="nav-item nav-link" routerLink="/all-users">User List</a>
+      <a class="nav-item nav-link" routerLink="/latest-news">Latest News</a>
+      <a class="nav-item nav-link" routerLink="/test">Tests</a>
     </div>
     <div class="navbar-nav" style="width:300px; float:right; margin-right:10px;">
       <span class="nav-item nav-link">{{ currentUser.firstName }} {{ currentUser.lastName }} </span>

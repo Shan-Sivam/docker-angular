@@ -3,12 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\login",
-    "\\src\\app\\register",
-    "\\src\\app\\_helpers",
-    "\\src\\app\\_services",
-    "\\src\\environments"
+    "\\src\\app\\summaries",
+    "\\src\\app\\_models",
+    "\\src\\app\\_services"
   ],
-  "SelectedNode": "\\docker-compose.yml",
+  "SelectedNode": "\\src\\app\\_services\\news-feed.service.ts",
   "PreviewInSolutionExplorer": false
 }

@@ -14,6 +14,10 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register/register.component';
+import { UserlistComponent } from './_shared/userlist.component';
+import { AllUsersComponent } from './summaries/all-users.component';
+import { LatestNewsComponent } from './summaries/latest-news.component';
+import { TestComponent } from './summaries/test.component';
 
 @NgModule({
     imports: [
@@ -27,7 +31,11 @@ import { RegisterComponent } from './register/register.component';
         AppComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        UserlistComponent,
+        AllUsersComponent,
+        LatestNewsComponent,
+        TestComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

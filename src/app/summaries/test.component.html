@@ -1,0 +1,11 @@
+<h1>Test Page</h1>
+
+<ul *ngIf="newsList">
+  <li *ngFor="let news of newsList">
+    <b> {{ news.title }}  - <u> {{ news.author }} </u> </b>
+    <p>
+      {{ news.contentSample }}
+    </p>
+  </li>
+
+</ul>

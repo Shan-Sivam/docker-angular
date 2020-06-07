@@ -5,7 +5,9 @@
 export const environment = {
     production: false,
     apiUrl: 'http://localhost:1337/api',
-    name: 'Dev v1.0'
+    newsApiUrl: 'http://newsapi.org/v2/top-headlines?',
+    newsApiKey: '2a5026bfaf314ff69af7e6df08faec20',
+    name: 'Dev v2.0'
 };
 
 /*

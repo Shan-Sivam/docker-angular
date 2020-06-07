@@ -1,0 +1,20 @@
+<div>
+  <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+  
+  <table *ngIf="users" class="table">
+    <caption>Users from api end point</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.firstName}} {{user.lastName}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

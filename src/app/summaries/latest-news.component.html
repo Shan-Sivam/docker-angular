@@ -1,0 +1,18 @@
+<h3>Latest News - <small> {{ lastUpdated | date: 'medium' }} </small> </h3>
+
+<div>
+  <article *ngFor="let news of (news$ | async)">
+    <h4>
+      {{news.title}} -
+      ({{news.user}} at <small> {{news.timestamp | date: 'medium'}} </small>)
+    </h4>
+
+    <p>{{ news.contentSample }}</p>
+
+    <a href="{{news.url}}">Link</a>
+    <div *ngIf="news.imageUrl">
+      <img src="{{news.imageUrl}}" height="100" width="200"/>
+    </div>
+  </article>
+
+</div>
